@@ -20,6 +20,9 @@ Solutions for the **13 Base Learn Solidity exercises** plus a **one-click page**
 | 12 | ERC-20 Tokens | `WeightedVoting` (OpenZeppelin ERC20 + EnumerableSet) | `0x4F333c49B820013e5E6Fe86634DC4Da88039CE50` |
 | 13 | ERC-721 Tokens | `HaikuNFT` (OpenZeppelin ERC721) | `0x15534ED3d1dBA55148695B2Ba4164F147E47a10c` |
 
+## Exercise notes
+Short explanations for every exercise are in [`docs/`](docs/README.md).
+
 ## How it works
 1. Get a little free Base Sepolia test ETH from a faucet.
 2. Open the helper page, connect your wallet (it switches to Base Sepolia).
