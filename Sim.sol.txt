@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface IPin { function testContract(address) external; }
+
+/// Only used inside eth_call (state override) to simulate: deploy candidate(s), then run the official unit test.
+contract Sim {
+    function _create(bytes memory init) internal returns (address c) {
+        assembly { c := create(0, add(init, 32), mload(init)) }
+        require(c != address(0), "create failed");
+    }
+
+    function one(bytes memory init, address pin) external returns (bool ok, bytes memory ret, address deployed) {
+        deployed = _create(init);
+        (ok, ret) = pin.call(abi.encodeWithSignature("testContract(address)", deployed));
+    }
+
+    function inheritance(bytes memory spInit, bytes memory emInit, bytes memory subCode, address pin) external returns (bool ok, bytes memory ret, address deployed) {
+        address sp = _create(spInit);
+        address em = _create(emInit);
+        deployed = _create(abi.encodePacked(subCode, abi.encode(sp, em)));
+        (ok, ret) = pin.call(abi.encodeWithSignature("testContract(address)", deployed));
+    }
+}
