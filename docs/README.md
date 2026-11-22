@@ -1,0 +1,15 @@
+# Exercise notes
+
+1. [Deploying to a Testnet – BasicMath](01-basic-math.md)
+2. [Control Structures](02-control-structures.md)
+3. [Storage – EmployeeStorage](03-storage.md)
+4. [Arrays – ArraysExercise](04-arrays.md)
+5. [Mappings – FavoriteRecords](05-mappings.md)
+6. [Structs – GarageManager](06-structs.md)
+7. [Inheritance](07-inheritance.md)
+8. [Imports – ImportsExercise](08-imports.md)
+9. [Errors – ErrorTriageExercise](09-errors.md)
+10. [The new Keyword – AddressBookFactory](10-new-keyword.md)
+11. [Minimal Tokens – UnburnableToken](11-minimal-tokens.md)
+12. [ERC-20 Tokens – WeightedVoting](12-erc20.md)
+13. [ERC-721 Tokens – HaikuNFT](13-erc721.md)
